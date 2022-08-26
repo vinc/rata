@@ -9,11 +9,13 @@
     88     `8b   88,    ,88    88,    88,    ,88
     88      `8b  `"8bbdP"Y8    "Y888  `"8bbdP"Y8
 
-Rata is a little language that compiles into JavaScript.
+Rata has not be implemented yet but the goal is to have a little language that
+will compile into Ruby and JavaScript.
+
 
 ## Example
 
-The following program:
+Assuming a `fact.rt` file containing the following Rata program:
 
     let fact = do |n|
       let f = 1
@@ -27,21 +29,14 @@ The following program:
 
     print fact 20
 
-Will be compiled into:
+The following command will compile it into Ruby and execute it:
 
-    var print = console.log
+    ruby rata.rb fact.rt | ruby
 
-    var fact = function (n) {
-      var f = 1
-      var i = 1
-      while (i < n) {
-        f *= i
-        i += 1
-      }
-      return f
-    }
+And the same for node:
 
-    print (fact (20))
+    node rata.js fact.rt | node
+
 
 ## LICENSE
 
