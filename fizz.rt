@@ -1,0 +1,13 @@
+let fizz = do |n|
+  let i = 1
+  while i < n do
+    if i % 3 do
+      print (i)
+    else
+      print ("fizz")
+    end
+    i += 1
+  end
+end
+
+fizz (20)

@@ -1,0 +1,11 @@
+let fact = do |n|
+  let f = 1
+  let i = 1
+  while i < n do
+    f *= i
+    i += 1
+  end
+  return f
+end
+
+print (fact (20))
